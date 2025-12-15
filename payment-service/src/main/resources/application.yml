@@ -1,6 +1,6 @@
 spring:
   application:
-    name: payment
+    name: payment-service
 server:
   port: 8085
 
@@ -10,3 +10,9 @@ eureka:
       # by default if we have eureka client on our dependency it will register it-self
       # to 8761 eureka.
       defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
